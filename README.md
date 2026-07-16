@@ -22,21 +22,21 @@
 
 ## 📦 Installation
 
-<code>
+```bash
 pip install irotechlab-yt-search
-</code>
+```
 
 Or install from source:
 
-<code>
+```bash
 git clone https://github.com/irotechlab/irotechlab-yt-search
 cd irotechlab-yt-search
 pip install -e .
-</code>
+```
 
 ## 🚀 Quick Start
 
-<code>
+```python
 import asyncio
 from irotechlab_yt_search import YouTubeSearch
 
@@ -55,11 +55,11 @@ async def main():
     await search.close()
 
 asyncio.run(main())
-</code>
+```
 
 ## 📹 Video Info
 
-<code>
+```python
 from irotechlab_yt_search import VideoInfo, extract_video_id
 
 async def get_video_info():
@@ -76,11 +76,11 @@ async def get_video_info():
     print(f"Comments: {details['comment_count']}")
     
     await info.close()
-</code>
+```
 
 ## 📺 Channel Info
 
-<code>
+```python
 from irotechlab_yt_search import ChannelInfo
 
 async def get_channel():
@@ -92,11 +92,11 @@ async def get_channel():
     print(f"Videos: {channel['video_count']}")
     
     await channel_info.close()
-</code>
+```
 
 ## 📋 Playlist Info
 
-<code>
+```python
 from irotechlab_yt_search import PlaylistInfo
 
 async def get_playlist():
@@ -111,24 +111,24 @@ async def get_playlist():
         print(f"  - {video['title']}")
     
     await playlist_info.close()
-</code>
+```
 
 ## 🔍 Advanced Search
 
 ### Filter by type
 
-<code>
+```python
 # Only videos
 videos = await search.search(
     "python tutorial",
     filter_type="video",
     max_results=10
 )
-</code>
+```
 
 ### Sort results
 
-<code>
+```python
 # Sort by view count
 videos = await search.search(
     "python tutorial",
@@ -140,17 +140,17 @@ videos = await search.search(
     "python tutorial",
     sort_by="upload_date"
 )
-</code>
+```
 
 ### Region and language
 
-<code>
+```python
 videos = await search.search(
     "python tutorial",
     region_code="IN",
     language="hi"
 )
-</code>
+```
 
 ## 🛠️ API Reference
 
@@ -168,7 +168,7 @@ videos = await search.search(
 
 ### Video Object
 
-<code>
+```
 @dataclass
 class Video:
     id: str
@@ -184,7 +184,7 @@ class Video:
     published: str
     published_date: Optional[datetime]
     is_live: bool
-</code>
+```
 
 ## 📂 Examples
 
@@ -192,10 +192,7 @@ Check the `examples/` directory for more usage examples:
 
 - `basic_search.py` - Simple search
 - `advanced_search.py` - Advanced filtering and sorting
-- `video_info_example.py` - Get video details
-- `bulk_video_info.py` - Get info for multiple videos
-- `export_to_json.py` - Export video info to JSON
-- `all_in_one_demo.py` - Complete demo of all features
+- `all_in_one.py` - Complete demo of all features
 
 ## 🤝 Contributing
 
