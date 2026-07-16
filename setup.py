@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="irotechlab-yt-search",
-    version="0.1.0",
+    version="1.0.0",
     author="IrotechLab",
     description="YouTube search without official API - fast, reliable, and free",
     long_description=open("README.md", "r", encoding="utf-8").read(),
