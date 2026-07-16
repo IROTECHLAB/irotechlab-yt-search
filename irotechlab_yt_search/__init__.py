@@ -2,7 +2,7 @@
 irotechlab-yt-search - YouTube search without official API
 """
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 __author__ = "IrotechLab"
 
 from .search import YouTubeSearch
